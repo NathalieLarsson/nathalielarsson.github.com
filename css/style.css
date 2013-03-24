@@ -377,12 +377,14 @@ article header .icon:before {
   text-align: center;
 }
 article header time {
-  color: #999;
   font: 0.9em "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   margin-bottom: 5px;
   display: block;
   line-height: 1;
   float: right;
+}
+article header time a {
+  color: #999;
 }
 article header .title {
   font-weight: normal;
