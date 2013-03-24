@@ -205,7 +205,7 @@ var twitter_stream = ['____nathalie', 5, false];
         $('h2 b').text(playerShots.shots[0].player.name);
 
         $.each(playerShots.shots, function (i, shot) {
-            html += '<li><h3>' + shot.title + '</h3>';
+            html += '<li class"dribbble-shot">';
             html += '<a href="' + shot.url + '">';
             html += '<img src="' + shot.image_url + '" ';
             html += 'alt="' + shot.title + '"></a></li>';
