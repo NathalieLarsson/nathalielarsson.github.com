@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>office, work, home | Life of Nathalie Larsson</title>
+  <title>Border-box on all the things | Life of Nathalie Larsson</title>
   <meta name="author" content="Nathalie Larsson">
   
   <meta name="description" content="Thoughts and work from Nathalie">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=1 ">
 
-  
+  <meta property="og:title" content="Border-box on all the things"/>
   <meta property="og:site_name" content="Life of Nathalie Larsson"/>
 
   <link rel="alternate" href="/atom.xml" title="Life of Nathalie Larsson" type="application/atom+xml">
@@ -31,25 +31,77 @@
 	<div id="content" class="inner">
 		<div id="main-col" class="alignleft"><div id="wrapper">
 
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-03-24T21:04:03.000Z"><a href="/2013/03/24/box-sizing-all-the-things/">24 Mar, 2013</a></time>
+      
+      
+  
+    <h1 class="title">Border-box on all the things</h1>
+  
 
-<h2 class="archive-title tag">office, work, home</h2>
+    </header>
+    <div class="entry">
+      
+        <p>One of the most annoying things with css is the relationship between width and padding. </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="tag">div</span><span class="rules">{
+	<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100</span>px;</span></span>
+	<span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>px;</span></span>
+	<span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">10</span>px;</span></span>	
+<span class="rule">}</span></span>
+</pre></td></tr></table></figure>
 
+<p>This code would result in an 120px x 120px div.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="tag">div</span><span class="rules">{
+	<span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box;</span></span>
+	<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100</span>px;</span></span>
+	<span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>px;</span></span>
+	<span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">10</span>px;</span></span>	
+<span class="rule">}</span></span>
+</pre></td></tr></table></figure>
 
-  <div class="archive">
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2013-03-22T18:32:28.000Z"><a href="/2013/03/22/new-setup/">22 Mar, 2013</a></time>
-            
-              <h1 class="title"><a href="/2013/03/22/new-setup/">New setup at home</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
+<p>This code would result in an 100px x 100px div.</p>
+<figure class="highlight"><figcaption><span>[Box-sizing]</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre>* <span class="rules">{ 
+	<span class="rule"><span class="attribute">-moz-box-sizing</span>:<span class="value"> border-box;</span></span> 
+	<span class="rule"><span class="attribute">-webkit-box-sizing</span>:<span class="value"> border-box;</span></span> 
+	<span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box;</span></span>
+<span class="rule">}</span></span>
+</pre></td></tr></table></figure>
+
+<p><a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">Read why you should use this and all your future projects over at Paul Irish blog</a></p>
+
+      
+    </div>
   </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comments</h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </div></div>
 		<aside id="sidebar" class="alignright">
 <div class="search">
@@ -212,7 +264,7 @@ var disqus_shortname = 'nthalie';
   var dsq = document.createElement('script');
   dsq.type = 'text/javascript';
   dsq.async = true;
-  dsq.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }());
 </script>

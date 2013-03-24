@@ -38,11 +38,77 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-03-24T20:12:58.000Z"><a href="/2013/03/24/new-setup/">24 Mar, 2013</a></time>
+        <time datetime="2013-03-24T21:04:03.000Z"><a href="/2013/03/24/box-sizing-all-the-things/">24 Mar, 2013</a></time>
       
       
   
-    <h1 class="title"><a href="/2013/03/24/new-setup/">New setup at home</a></h1>
+    <h1 class="title"><a href="/2013/03/24/box-sizing-all-the-things/">Border-box on all the things</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>One of the most annoying things with css is the relationship between width and padding. </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="tag">div</span><span class="rules">{
+	<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100</span>px;</span></span>
+	<span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>px;</span></span>
+	<span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">10</span>px;</span></span>	
+<span class="rule">}</span></span>
+</pre></td></tr></table></figure>
+
+<p>This code would result in an 120px x 120px div.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="tag">div</span><span class="rules">{
+	<span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box;</span></span>
+	<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100</span>px;</span></span>
+	<span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>px;</span></span>
+	<span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">10</span>px;</span></span>	
+<span class="rule">}</span></span>
+</pre></td></tr></table></figure>
+
+<p>This code would result in an 100px x 100px div.</p>
+<figure class="highlight"><figcaption><span>[Box-sizing]</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre>* <span class="rules">{ 
+	<span class="rule"><span class="attribute">-moz-box-sizing</span>:<span class="value"> border-box;</span></span> 
+	<span class="rule"><span class="attribute">-webkit-box-sizing</span>:<span class="value"> border-box;</span></span> 
+	<span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box;</span></span>
+<span class="rule">}</span></span>
+</pre></td></tr></table></figure>
+
+<p><a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">Read why you should use this and all your future projects over at Paul Irish blog</a></p>
+
+      
+    </div>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-03-22T18:32:28.000Z"><a href="/2013/03/22/new-setup/">22 Mar, 2013</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/03/22/new-setup/">New setup at home</a></h1>
   
 
     </header>
@@ -116,6 +182,8 @@
     <li><a href="/tags/fitbit%2C-training%2C-gym/">fitbit, training, gym</a><small>1</small></li>
   
     <li><a href="/tags/office%2C-work%2C-home/">office, work, home</a><small>1</small></li>
+  
+    <li><a href="/tags/code%2C-css/">code, css</a><small>1</small></li>
   
   </ul>
 </div>
