@@ -134,87 +134,63 @@ var twitter_stream = ['____nathalie', 5, false];
 </script>
 <script src="/js/twitter.js"></script>
 
-
-<div class="widget dribbble">
-    <h1>getShotsByPlayerId</h1>
-
-    <h2>Player: <b></b></h2>
-    <ul id="shotsByPlayerId"></ul>
-
-
-</div>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="/js/jribbble.js"></script>
-    <script>
-        var callback = function (playerShots) {
-            var html = '';
-
-            $('h2 b').text(playerShots.shots[0].player.name);
-
-            $.each(playerShots.shots, function (i, shot) {
-                html += '<li><h3>' + shot.title + '</h3>';
-                html += '<a href="' + shot.url + '">';
-                html += '<img src="' + shot.image_url + '" ';
-                html += 'alt="' + shot.title + '"></a></li>';
-            });
-
-            $('#shotsByPlayerId').html(html);
-        };
-
-        $.jribbble.getShotsByPlayerId('____nathalie', callback, {page: 1, per_page: 8});
-    </script>
-
 </aside>
 		<div class="clearfix"></div>
 		<section class="skillz-section">
-			<ul>
-				<li class="css3" >
-					<h3>CSS3</h3>
-					<p></p>
-				</li>
-				<li class="html5" >
-					<h3>HTML5</h3>
-					<p></p>
-				</li>
-				<li class="photoshop" >
-					<h3>Photoshop</h3>
-					<p></p>
-				</li>
-			</ul>
-		</section>
-		<div class="clearfix"></div>
-		<section class="about-section">
-			<article class="about-me">
-				<figure>
-					<img src="/images/wp.jpg" alt="" />
-				</figure>
-				<aside>
-					<h1>About me, Nathalie</h1>
-					<span class="extra-text">5 quick things about me</span>
-					<ul class="nathalie-list">
-						<li>Born on a dark day in september 1990</li>
-						<li>Drink way too much coffee (self medicating my adhd)</li>
-						<li>Employeed by Mirror since 2011 and I love it</li>
-						<li>Talking too fast for most people and always need to repeat myself</li>
-						<li>12 family members, 1 boyfriend, 1 dog and 2 cats - Everything I need in this world</li>
-					</li>
-				</aside>
-			</article>
-			<div class="clearfix"></div>
+	<ul>
+		<li class="css3" >
+			<h3>CSS3</h3>
+			<p></p>
+		</li>
+		<li class="html5" >
+			<h3>HTML5</h3>
+			<p></p>
+		</li>
+		<li class="photoshop" >
+			<h3>Photoshop</h3>
+			<p></p>
+		</li>
+	</ul>
+</section>
+<div class="clearfix"></div>
+<section class="about-section">
+	<article class="about-me">
+		<figure>
+			<img src="/images/wp.jpg" alt="" />
+		</figure>
+		<aside>
+			<h1>About me, Nathalie</h1>
+			<span class="extra-text">5 quick things about me</span>
+			<ul class="nathalie-list">
+				<li>Born on a dark day in september 1990</li>
+				<li>Drink way too much coffee (self medicating my adhd)</li>
+				<li>Employeed by Mirror since 2011 and I love it</li>
+				<li>Talking too fast for most people and always need to repeat myself</li>
+				<li>12 family members, 1 boyfriend, 1 dog and 2 cats - Everything I need in this world</li>
+			</li>
+		</aside>
+	</article>
+	<div class="clearfix"></div>
 
-			<article class="home-office">
-				<figure class="right">
-					<img src="/images/wp.jpg" alt="" />
-				</figure>
-				<aside class="right">
-					<h1>Borta bra men hemma bäst</h1>
-					<span class="extra-text">English: “There's no place like home”</span>
-					<p></p>
-				</aside>
-			</article>
-			<div class="clearfix"></div>
-		</section>
+	<article class="home-office">
+		<figure class="right">
+			<img src="/images/wp.jpg" alt="" />
+		</figure>
+		<aside class="right">
+			<h1>Borta bra men hemma bäst</h1>
+			<span class="extra-text">English: “There's no place like home”</span>
+			<p></p>
+		</aside>
+	</article>
+	<div class="clearfix"></div>
+</section>
+<section class="dribbble">
+	<h1>getShotsByPlayerId</h1>
+<h2>Player: <b></b></h2>
+<ul id="shotsByPlayerId"></ul>
+
+
+</section>
 	</div>
 	<footer id="footer" class="inner"><div class="alignleft">
   
@@ -224,6 +200,27 @@ var twitter_stream = ['____nathalie', 5, false];
 <div class="clearfix"></div></footer>
 	<script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
+
+
+<script src="/js/jribbble.js"></script>
+<script>
+    var callback = function (playerShots) {
+        var html = '';
+
+        $('h2 b').text(playerShots.shots[0].player.name);
+
+        $.each(playerShots.shots, function (i, shot) {
+            html += '<li><h3>' + shot.title + '</h3>';
+            html += '<a href="' + shot.url + '">';
+            html += '<img src="' + shot.image_url + '" ';
+            html += 'alt="' + shot.title + '"></a></li>';
+        });
+
+        $('#shotsByPlayerId').html(html);
+    };
+
+    $.jribbble.getShotsByPlayerId('____nathalie', callback, {page: 1, per_page: 8});
+</script>
 
 
 <script type="text/javascript">
