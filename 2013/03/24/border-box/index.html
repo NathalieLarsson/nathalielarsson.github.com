@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A small personal blog by me!">
 
-    <title>Nathalie Festin</title>
+    <title>Border-box all the things - Nathalie Festin</title>
 
-    <link rel="canonical" href="http://nthalie.com/">
+    <link rel="canonical" href="http://nthalie.com/2013/03/24/border-box/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -75,61 +75,71 @@
 </nav>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/bg.png')">
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/post-border-box.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Nathalie Festin</h1>
-                    <hr class="small">
-                    <span class="subheading">A small and personal blog by me</span>
+                <div class="post-heading">
+                    <h1>Border-box all the things</h1>
+                    
+                    <h2 class="subheading">and it can save your ***</h2>
+                    
+                    <span class="meta">Posted by Nathalie Festin on March 24, 2013</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			
-<div class="post-preview">
-    <a href="/2015/04/26/intro/">
-        <h2 class="post-title">            Adhd in my worst enemy
-        </h2>
-        
-        <h3 class="post-subtitle">
-            but also my best friend
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by Nathalie Festin on April 26, 2015</p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<div class="post-preview">
-    <a href="/2013/03/24/border-box/">
-        <h2 class="post-title">            Border-box all the things
-        </h2>
-        
-        <h3 class="post-subtitle">
-            and it can save your ***
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by Nathalie Festin on March 24, 2013</p>
-</div>
-<hr>
+				<p>One of the most annoying things with css is the relationship between width and padding. </p>
+<p>This code would result in an 120px x 120px div:</p>
 
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span><span class="p">{</span>
+	<span class="k">width</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
+	<span class="k">height</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
+	<span class="k">padding</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>	
+<span class="p">}</span></code></pre></div>
 
-<!-- Pager -->
+<p>This code would result in an 100px x 100px div:</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span><span class="p">{</span>
+	<span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+	<span class="k">width</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
+	<span class="k">height</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
+	<span class="k">padding</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>	
+<span class="p">}</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">*</span> <span class="p">{</span> 
+	<span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span> 
+	<span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span> 
+	<span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">Read why you should use this and all your future projects over at Paul Irish blog</a></p>
 
 
-		</div>
-	</div>
-</div>
+                <hr>
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2015/04/26/intro/" data-toggle="tooltip" data-placement="top" title="Adhd in my worst enemy">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
 
 <hr>
 
